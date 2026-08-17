@@ -263,11 +263,17 @@ And please support the upstream project this is built on — [Open-LLM-VTuber](h
 
 ## Contributing
 
-Issues and pull requests are welcome.
+Issues and pull requests are welcome, and this is a small enough project that yours will actually matter.
 
-- File bugs and feature ideas in **Issues**.
-- For code changes, open a **Pull Request** with a clear description.
+**New here? Start with a [good first issue](https://github.com/inni918/warashi/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22).**
+
+The easiest way in: Warashi's speech recognition, voices, and translation are all pluggable, and adding one is **a new file plus one branch in a factory**. There are already 20 voices and 8 speech engines in the tree to copy from. [`CONTRIBUTING.md`](./CONTRIBUTING.md) has step-by-step recipes.
+
+- File bugs and feature ideas in **Issues** — this repo, not upstream.
+- For code changes, open a **Pull Request** with a clear description, and say what platform you tested on. Most bugs here are platform-specific.
 - Please **do not** add copyrighted characters, artwork, voices, or trained voice models — keep the repo shippable as neutral defaults only.
+
+Read [`CONTRIBUTING.md`](./CONTRIBUTING.md) before starting anything large — it lists what is out of scope, so you don't spend a weekend on something that gets turned down.
 
 ---
 ---
@@ -492,8 +498,14 @@ Ollama 可以在它自己的伺服器上跑一個*更大的*模型，所以慢�
 
 ## 貢獻指南
 
-歡迎開 issue 與 pull request。
+歡迎開 issue 與 pull request。這個專案還小，你的一個 PR 是真的有份量的。
 
-- bug 與功能想法請開 **Issue**。
-- 程式碼變更請開 **Pull Request** 並清楚說明。
+**第一次來？從 [good first issue](https://github.com/inni918/warashi/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) 開始。**
+
+最好上手的地方：Warashi 的語音辨識、聲音、翻譯全都是可插拔的，加一個等於**新增一個檔案 + 在 factory 加一個分支**。樹裡已經有 20 個聲音引擎和 8 個語音辨識引擎可以照抄，[`CONTRIBUTING.md`](./CONTRIBUTING.md) 有一步一步的作法。
+
+- bug 與功能想法請開 **Issue**——開在這個 repo，不是上游。
+- 程式碼變更請開 **Pull Request** 並清楚說明，順便講一下你在哪個平台測的。這裡多數 bug 都跟平台有關。
 - 請**不要**加入有版權的角色、美術、語音或訓練過的語音模型，讓 repo 維持可發布的中性預設狀態。
+
+要動比較大的東西之前先看 [`CONTRIBUTING.md`](./CONTRIBUTING.md)，裡面寫了哪些方向已經拍板不做，免得你花一個週末做出來卻被退。

@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Upstream project (Open-LLM-VTuber)
+    url: https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/issues
+    about: >-
+      If the problem is in the underlying engine rather than Warashi's packaging,
+      setup wizard, memory system, or UI, please report it upstream.
+      如果問題出在底層引擎、而不是 Warashi 的封裝、設定精靈、記憶系統或介面，請到上游回報。
+  - name: I want to contribute but do not know where to start
+    url: https://github.com/inni918/warashi/blob/main/CONTRIBUTING.md
+    about: >-
+      CONTRIBUTING.md has copy-this-file recipes for adding a speech recognition
+      engine, a voice, or a translation provider.
+      CONTRIBUTING.md 有「照抄這個檔案」的作法，可以加語音辨識引擎、聲音、翻譯來源。

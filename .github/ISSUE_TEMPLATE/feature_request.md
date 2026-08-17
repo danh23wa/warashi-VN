@@ -1,44 +1,66 @@
 ---
-name: Feature request / 功能建议
-about: Suggest an idea for this project / 提出改善项目的建议
-title: "[IDEA]"
+name: Feature request / 功能建議
+about: Suggest something Warashi should do / 建議 Warashi 該做的事
+title: "[IDEA] "
 labels: enhancement
 assignees: ''
 
 ---
 
-### 这个功能请求是用来解决什么问题的？ / Is your feature request related to a problem? Please describe.
-*请清晰简洁地描述您遇到的问题。例如：我总是在 [...] 时感到不方便。*
-*A clear and concise description of what the problem is. Ex. I'm always frustrated when [...] *
+<!--
+Before writing: please skim the "Scope: what will be turned down" section in
+CONTRIBUTING.md. A few things are settled decisions rather than open questions,
+and it saves you the effort.
 
-[在这里输入问题描述 / Type problem description here]
+動筆前：請先看一下 CONTRIBUTING.md 的「Scope」段。有幾件事是已經拍板的方向、
+不是開放討論的問題，先看可以省下你的力氣。
+-->
 
-### 您期望的解决方案是什么？ / Describe the solution you'd like
-*请清晰简洁地描述您希望实现的功能或效果。*
-*A clear and concise description of what you want to happen.*
+### Scope check / 範圍確認
 
-[在此处输入期望的解决方案 / Type desired solution here]
+- [ ] This is not a mobile version, a paid tier, or a bundled character marketplace.
+      這不是手機版、付費方案、或內建角色市集。
+- [ ] This does not make the "download → double-click → chat" path harder for a
+      non-technical user.
+      這不會讓非技術使用者的「下載 → 點兩下 → 開始聊」變難。
 
-### 此功能为何对 Open-LLM-VTuber 很重要？ / Why is this important for Open-LLM-VTuber?
-*请解释为什么这个功能对 Open-LLM-VTuber 项目来说是实用且重要的。它能带来什么价值？例如，它如何提升用户体验、扩展项目能力、解决核心痛点等。*
-*Explain why this feature would be useful and significant for the Open-LLM-VTuber project. What value does it add? For example, how does it improve user experience, extend project capabilities, or solve core pain points?*
+---
 
-[在此处说明其重要性 / Explain its importance here]
+### What problem does this solve? / 這解決什麼問題？
 
-### 您考虑过哪些替代方案？ / Describe alternatives you've considered
-*请清晰简洁地描述您考虑过的任何替代解决方案或特性。*
-*A clear and concise description of any alternative solutions or features you've considered.*
+<!--
+Describe the situation you actually ran into, not the solution yet.
+先描述你實際遇到的情況，還不用講解法。
+-->
 
-[在此处输入替代方案 / Type alternatives here]
+### What would you like to happen? / 你希望怎麼做？
 
-### 您是否愿意参与开发此功能？ / Would you like to work on this issue?
-*请回答 Yes 或 No。如果您愿意，我们可以讨论后续步骤。*
-*Please answer Yes or No. If yes, we can discuss the next steps.*
+### Alternatives you considered / 你想過的其他做法
 
-[回答 Yes/No / Answer Yes/No]
+<!-- Optional, but a comparison makes the case much stronger. -->
+<!-- 選填，但有比較會讓提案有說服力得多。 -->
 
-### 补充信息 / Additional context
-*在此处添加有关此功能请求的任何其他上下文、截图、日志或设计稿。*
-*Add any other context, screenshots, logs, or mockups about the feature request here.*
+---
 
-[在此处添加补充信息 / Add additional context here]
+### Would you like to build it? / 你想自己動手嗎？
+
+- [ ] Yes, and I would like a pointer on where to start
+      想，希望有人指一下從哪裡下手
+- [ ] Yes, I already know where it goes
+      想，我知道該改哪裡
+- [ ] No, just suggesting
+      不，只是提議
+
+<!--
+Either answer is fine. If yes, CONTRIBUTING.md has recipes for adding an ASR
+engine, a TTS engine, and a translation provider — those are the easiest
+places to start.
+
+兩種都可以。如果想動手，CONTRIBUTING.md 裡有加語音辨識引擎、語音合成引擎、
+翻譯來源的作法，那三個是最好上手的地方。
+-->
+
+### Anything else / 補充
+
+<!-- Screenshots, mockups, links to how another project does it. -->
+<!-- 截圖、草圖、其他專案怎麼做的連結。 -->

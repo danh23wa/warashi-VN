@@ -1,79 +1,80 @@
 ---
-name: Bug & Question & Get Help | Bug & 提问 & 求助
-about: Describe this issue template's purpose here. 请描述你遇到的问题
-title: "[GET HELP] "
-labels: question
+name: Bug report / 回報問題
+about: Something in Warashi is broken / Warashi 有東西壞了
+title: "[BUG] "
+labels: bug
 assignees: ''
 
 ---
 
-### 1. Checklist / 检查项
+<!--
+This is the Warashi issue tracker. If your problem is with the upstream
+Open-LLM-VTuber project rather than Warashi, please report it there instead.
 
-- [ ]  I have removed sensitive information from configuration/logs.
-    
-    我已移除配置或日志中的敏感信息。
-    
-- [ ]  I have checked the [FAQ](https://docs.llmvtuber.com/docs/faq/) and [existing issues](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/issues).
-    
-    我已查阅[常见问题](https://docs.llmvtuber.com/docs/faq/)和[已有 issue](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/issues)。
-    
-- [ ]  I am using the latest version of the project.
-    
-    我正在使用项目的最新版本。
-    
+這裡是 Warashi 的問題追蹤區。如果問題出在上游的 Open-LLM-VTuber 而不是
+Warashi，請到那邊回報。
+-->
 
----
+### Checklist / 檢查項
 
-### 2. Environment Details / 环境信息
-
-- How did you install Open-LLM-VTuber:
-    
-    你是如何安装 Open-LLM-VTuber 的：
-    
-    - [ ]  git clone （源码克隆）
-    - [ ]  release zip （发布包）
-    - [ ]  exe (Windows) （Windows 安装包）
-    - [ ]  dmg (MacOS) （MacOS 安装包）
-- Are you running the backend and frontend on the same device?
-    
-    后端和前端是否在同一台设备上运行？
-    
-- If you used GPU, please provide your GPU model and driver version:
-    
-    如果你使用了 GPU，请提供你的 GPU 型号及驱动版本信息:
-    
-- Browser (if applicable):
-
-       浏览器（如果适用）：
+- [ ] I removed API keys and other sensitive values from anything I pasted below.
+      我已從下方貼上的內容移除 API key 等敏感資訊。
+- [ ] I am on the latest Warashi release.
+      我用的是最新版 Warashi。
+- [ ] I searched existing issues in **this** repo.
+      我搜尋過**這個** repo 的既有 issue。
 
 ---
 
-### 3. Describe the bug / 问题描述
+### Environment / 環境
 
-What exactly is happening? What do you want to see? How to reproduce?
+- **OS and version** / 作業系統與版本:
+  <!-- e.g. macOS 15.2 Apple Silicon, or Windows 11 23H2 -->
+- **Warashi version** / Warashi 版本:
+  <!-- shown in the app, or the release tag you downloaded -->
+- **How you installed** / 安裝方式:
+  - [ ] Release zip / 發布包
+  - [ ] From source / 原始碼
+- **Where the LLM runs** / 大腦跑在哪:
+  <!-- e.g. local Ollama qwen2.5:3b / an API / another machine on the LAN -->
 
-请详细描述发生了什么、你希望看到什么，以及如何复现。
+If the problem involves **voice or audio**, please also fill in:
+如果問題跟**語音或聲音**有關，請補上：
+
+- `asr_model` in your `conf.yaml`:
+- `tts_model` in your `conf.yaml`:
 
 ---
 
-### 4. Screenshots / Logs (if relevant)
+### What happened / 發生了什麼
 
-截图 / 日志（如有）
+<!--
+What did you do, what did you expect, what happened instead?
+你做了什麼、預期看到什麼、實際發生什麼？
+-->
 
-- Backend log: 后端日志
-- Frontend setting (General): 前端设置（通用）
-- Frontend console log (F12): 前端控制台日志（F12）
-- If using Ollama: output of `ollama ps`:
-如果使用 Ollama，请附上 `ollama ps` 的输出
+### How to reproduce / 如何重現
+
+1.
+2.
+3.
 
 ---
 
-### 5. Configuration / 配置文件
+### Backend log / 後端日誌
 
-> Please provide relevant config files, with sensitive info like API keys removed
-> 
-> 
-> 请提供相关配置文件（请务必去除 API key 等敏感信息）
-> 
-- `conf.yaml`
-- `model_dict.json`, `.model3.json`
+<!--
+This is the single most useful thing you can attach. Most reports cannot be
+acted on without it. Remember to strip API keys.
+
+這是最有用的東西。沒有它多數問題無法處理。記得先把 API key 拿掉。
+-->
+
+```
+paste log here / 日誌貼這裡
+```
+
+### Screenshots or frontend console / 截圖或前端主控台
+
+<!-- Frontend console: press F12. Optional but helpful for UI problems. -->
+<!-- 前端主控台：按 F12。UI 問題附上會很有幫助。 -->
