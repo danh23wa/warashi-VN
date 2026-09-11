@@ -74,6 +74,7 @@ class ToolCallObject:
     type: str = "function"
     index: int = 0
     function: ToolCallFunctionObject = field(default_factory=ToolCallFunctionObject)
+    extra_content: dict[str, Any] | None = None
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> "ToolCallObject":
@@ -89,5 +90,9 @@ class ToolCallObject:
             name=data["function"]["name"], arguments=data["function"]["arguments"]
         )
         return cls(
-            id=data["id"], type=data["type"], index=data["index"], function=function
+            id=data["id"],
+            type=data["type"],
+            index=data["index"],
+            function=function,
+            extra_content=data.get("extra_content"),
         )

@@ -1,3 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Build / cache
+dist/
+build/
+*.egg-info/
+
+# Node
+node_modules/
+.npm/
+.yarn/
+.pnpm-store/
+
+# Temporary files
+tmp/
+temp/
+
+# Python test/cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local AI / model files
+models/
+checkpoints/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
 # ignore the user configuration file
 conf.yaml
 

@@ -62,7 +62,6 @@ class BasicMemoryAgent(AgentInterface):
         self._tool_prompts = tool_prompts or {}
         self._interrupt_handled = False
         self.prompt_mode_flag = False
-
         self._tool_manager = tool_manager
         self._tool_executor = tool_executor
         self._mcp_prompt_string = mcp_prompt_string
@@ -122,6 +121,25 @@ class BasicMemoryAgent(AgentInterface):
 
         if self.interrupt_method == "user":
             system = f"{system}\n\nIf you received `[interrupted by user]` signal, you were interrupted."
+
+        if self._use_mcpp:
+            system = (
+                f"{system}\n\n"
+                "Quy tắc agent file: Hãy hiểu ý định tự nhiên của người dùng trước khi "
+                "hành động. Với yêu cầu liên quan đến file trong Downloads, hãy dùng "
+                "tool manage_file và chọn action open, read, print hoặc delete. Chỉ "
+                "truyền các từ nhận diện tên file vào query, không truyền cả câu người "
+                "dùng. Nếu có nhiều file phù hợp, hãy hỏi người dùng chọn file nào. "
+                "Không được nói đã thực hiện nếu tool chưa xác nhận. In và xóa luôn "
+                "phải có xác nhận rõ ràng của người dùng trước khi gọi tool với "
+                "confirm=true. Luôn trả lời người dùng bằng tiếng Việt. Không được "
+                "tự chèn quảng cáo, lời kêu gọi đăng ký kênh, câu 'subscribe', hoặc "
+                "nội dung không liên quan đến yêu cầu của người dùng. Khi cần dùng "
+                "tool, phải gọi function thật và không được mô tả giả lập như 'đang "
+                "gọi tool', 'để tôi xử lý', hoặc tự kể hành động trong phần trả lời. "
+                "Đặc biệt, không được nói đã in file nếu chưa nhận kết quả xác nhận "
+                "từ manage_file."
+            )
 
         self._system = system
 
@@ -476,6 +494,11 @@ class BasicMemoryAgent(AgentInterface):
                                         "name": tc.function.name,
                                         "arguments": tc.function.arguments,
                                     },
+                                    **(
+                                        {"extra_content": tc.extra_content}
+                                        if tc.extra_content
+                                        else {}
+                                    ),
                                 }
                                 for tc in pending_tool_calls
                             ],
