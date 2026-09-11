@@ -71,22 +71,22 @@ async function createWindow() {
   mainWindow.setContentProtection(false);
   await mainWindow.loadURL(`${SERVER_URL}/?desktop=1`);
 
-  await mainWindow.webContents.insertCSS(`
-    html, body, #root { background: transparent !important; }
-    body { overflow: hidden !important; }
-    img[alt="background"],
-    [role="dialog"],
-    input, textarea,
-    button,
-    [contenteditable="true"] { display: none !important; }
-    canvas {
-      position: fixed !important;
-      inset: 0 !important;
-      width: 100vw !important;
-      height: 100vh !important;
-      z-index: 10 !important;
-    }
-  `);
+//   await mainWindow.webContents.insertCSS(`
+//     html, body, #root { background: transparent !important; }
+//     body { overflow: hidden !important; }
+//     img[alt="background"],
+//     [role="dialog"],
+//     input, textarea,
+//     button,
+//     [contenteditable="true"] { display: none !important; }
+//     canvas {
+//       position: fixed !important;
+//       inset: 0 !important;
+//       width: 100vw !important;
+//       height: 100vh !important;
+//       z-index: 10 !important;
+//     }
+//   `);
 
   mainWindow.on("closed", () => {
     mainWindow = null;
