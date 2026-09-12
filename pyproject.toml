@@ -20,6 +20,7 @@ dependencies = [
     "numpy>=1.26.4,<2",
     "onnxruntime>=1.20.1",
     "openai>=1.57.4",
+    "openpyxl>=3.1.5",
     "pre-commit>=4.1.0",
     "pydub>=0.25.1",
     "pysbd>=0.3.4",
@@ -42,6 +43,8 @@ dependencies = [
     "duckduckgo-mcp-server>=0.1.1",
     "opencc>=1.1.0",
     "imageio-ffmpeg>=0.6.0",
+    "python-docx>=1.2.0",
+    "pypdf>=6.18.0",
 ]
 
 [project.optional-dependencies]
